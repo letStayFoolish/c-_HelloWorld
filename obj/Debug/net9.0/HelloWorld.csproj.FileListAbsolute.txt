@@ -12,3 +12,4 @@
 /Users/chili/RiderProjects/HelloWorld/obj/Debug/net9.0/HelloWorld.pdb
 /Users/chili/RiderProjects/HelloWorld/obj/Debug/net9.0/HelloWorld.genruntimeconfig.cache
 /Users/chili/RiderProjects/HelloWorld/obj/Debug/net9.0/ref/HelloWorld.dll
+/Users/chili/RiderProjects/HelloWorld/obj/Debug/net9.0/HelloWorld.sourcelink.json

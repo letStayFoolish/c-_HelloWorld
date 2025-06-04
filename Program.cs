@@ -46,8 +46,8 @@ namespace HelloWorld
             {
                 var numberAsStr = "1234";
                 // int convertedStr = numberAsStr; // won't work!
-                // int convertedStr = Convert.ToInt32(numberAsStr);
-                int convertedStr = Convert.ToByte(numberAsStr);
+                int convertedStr = Convert.ToInt32(numberAsStr);
+                // int convertedStr = Convert.ToByte(numberAsStr);
                 Console.WriteLine(numberAsStr);
                 Console.WriteLine(convertedStr);
             }
@@ -67,6 +67,11 @@ namespace HelloWorld
             Console.WriteLine(isWorking);
             // Console.WriteLine(); // code snippet: "cw"
             Console.WriteLine("{0} {1} {2}", byte.MinValue, byte.MaxValue, totalPrice);
+
+            var numberA = 2;
+            var numberB = 9;
+
+            Console.WriteLine((float)numberB / (float)numberA);
         }
     }
 }
