@@ -1,0 +1,37 @@
+# Build folders
+bin/
+obj/
+Debug/
+Release/
+
+# Visual Studio files
+.vscode/
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Log files
+*.log
+*.trace
+*.tmp
+*.temp
+
+# NuGet
+*.nupkg
+packages/
+project.lock.json
+
+# Auto-generated files
+Generated/
+*.g.cs
+*.g.i.cs
+
+# Environment files
+.env
+*.env.*
