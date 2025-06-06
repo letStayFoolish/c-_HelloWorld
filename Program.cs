@@ -50,8 +50,23 @@ namespace HelloWorld
             {
                 for (char column = 'a'; column < 'k'; column++)
                 {
-                    Console.WriteLine($"Row: {row}, Column: {column}");       
+                    Console.WriteLine($"Row: {row}, Column: {column}");
                 }
+            }
+
+            var teaList = new List<string> { "Black", "Green", "White" };
+
+            teaList.Add("Macha");
+
+            // for-loop vs. foreach-loop
+            for (int j = 0; j < teaList.Count; j++)
+            {
+                Console.WriteLine(teaList[j].ToUpper());
+            }
+
+            foreach (var tea in teaList)
+            {
+                Console.WriteLine($"My favorite tea is {tea}");
             }
 
             byte b = 1;
@@ -105,6 +120,22 @@ namespace HelloWorld
             foreach (var name in names)
             {
                 Console.WriteLine($"Name: {name}");
+            }
+
+            // LINQ
+            List<int> scores = [1, 55, 6, 77, 223, 43];
+            // LINQ Query Expression
+            // it is LIKE SQL - it is a Language Integrated Query
+            IEnumerable<string> scoresQuery = 
+                // query syntax
+                from score in scores 
+                where score > 44
+                orderby score descending 
+                select $"The score is: {score}";
+            // SQL
+            foreach (var score in scoresQuery)
+            {
+                Console.WriteLine(score);
             }
         }
     }

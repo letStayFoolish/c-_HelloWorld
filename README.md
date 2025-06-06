@@ -227,3 +227,35 @@ Microsoft C# tool for building web applications.
 - The .NET Framework consists of a runtime engine and libraries for executing programs written in a **compliant** language.
 - The .NET Framework supports more than 20 languages including: C#, C++, VB, Java/J++,...
 - C# is the most popular language to write applications for the .NET Framework.
+
+Arrays are fixed in length. Thats why we need `Lists`
+
+```csharp
+var names = new List<string>{"one", "two"};
+```
+
+Use `List<T>` as a default. Use `array`s when you need a fixed length.
+```csharp
+var names = string[];
+// instead of: names.Add();
+names = [..names, "new one"];
+```
+
+## LINQ - Language Integrated Query
+
+Allows you to query data and express it in a simple way.
+
+**Declarative Programming**
+
+```csharp
+// Define the query expression
+IEnumerable<int> scoreQuery = 
+    from score in scores // required line
+    where score > 80
+    select score;// required line
+```
+
+Chaining functions within LINQ
+```csharp
+var scoreQuery = scores.Where(s => s > 80).OrderByDescenging(s => s);
+```
