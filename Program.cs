@@ -26,13 +26,33 @@ namespace HelloWorld
             // char letter = 'a';
             // string firstName = "Nemanja";
             // bool isWorking = true;
-            
+
             var number = 2;
             var count = 10;
             var totalPrice = 22.5f;
             var letter = 'a';
             var firstName = "Nemanja";
             var isWorking = true;
+
+            string friends = $"My friends are {firstName} and Someone else";
+            Console.WriteLine(friends);
+            Console.WriteLine(friends.Replace("Nemanja", "Anja"));
+            Console.WriteLine(friends);
+            Console.WriteLine(friends.StartsWith("Are they"));
+
+            int capacity = friends.Split(" ").Length;
+            for (int j = 0; j < capacity; j++)
+            {
+                Console.WriteLine($"Looping: {j}/{capacity}");
+            }
+
+            for (int row = 1; row < 11; row++)
+            {
+                for (char column = 'a'; column < 'k'; column++)
+                {
+                    Console.WriteLine($"Row: {row}, Column: {column}");       
+                }
+            }
 
             byte b = 1;
             int i = b;
@@ -57,8 +77,8 @@ namespace HelloWorld
                 Console.WriteLine(e);
                 throw;
             }
-            
-            
+
+
             Console.WriteLine(number);
             Console.WriteLine(count);
             Console.WriteLine(totalPrice);
@@ -72,6 +92,20 @@ namespace HelloWorld
             var numberB = 9;
 
             Console.WriteLine((float)numberB / (float)numberA);
+
+            // Standard declaration
+            string[] names = new string[3];
+            names[0] = "Nemanja";
+            names[1] = "Irina";
+            names[2] = "Jelena";
+
+            // Declaration with initialization
+            string[] myNewList = { "C#", "Java", "JavaScript" };
+            Console.WriteLine(myNewList);
+            foreach (var name in names)
+            {
+                Console.WriteLine($"Name: {name}");
+            }
         }
     }
 }

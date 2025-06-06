@@ -213,3 +213,17 @@ Often used in Low-level Programming (Web API, WebSockets, etc...)
 **And** | `&` |
 
 **Or** | `|` |
+
+### ASP.NET Core
+Microsoft C# tool for building web applications.
+
+**.NET** - Microsoft's Software Development Platform since 2001. (Similar to Java Virtual Machine)
+
+**ASP** "Active Server Pages" - Dynamic web pages, usually connected to a database.
+
+**Core** - open source, cross-platform version of ASP.
+
+- .NET is NOT a Language.
+- The .NET Framework consists of a runtime engine and libraries for executing programs written in a **compliant** language.
+- The .NET Framework supports more than 20 languages including: C#, C++, VB, Java/J++,...
+- C# is the most popular language to write applications for the .NET Framework.
