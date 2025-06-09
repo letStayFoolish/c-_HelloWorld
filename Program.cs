@@ -126,16 +126,33 @@ namespace HelloWorld
             List<int> scores = [1, 55, 6, 77, 223, 43];
             // LINQ Query Expression
             // it is LIKE SQL - it is a Language Integrated Query
-            IEnumerable<string> scoresQuery = 
+            IEnumerable<string> scoresQuery =
                 // query syntax
-                from score in scores 
+                from score in scores
                 where score > 44
-                orderby score descending 
+                orderby score descending
                 select $"The score is: {score}";
             // SQL
             foreach (var score in scoresQuery)
             {
                 Console.WriteLine(score);
+            }
+
+            Random random = new Random();
+            string[] orders = new string[7];
+            for (var c = 0; c < orders.Length; c++)
+            {
+                int prefixNumber = random.Next(65, 70);
+                string prefixLetter = Convert.ToChar(prefixNumber).ToString();
+                string suffixNumber = random.Next(1, 1000).ToString("000");
+
+                string id = $"{prefixLetter}{suffixNumber}";
+                orders[c] = id;
+            }
+
+            foreach (string order in orders)
+            {
+                Console.WriteLine($"Order ID: {order}");
             }
         }
     }
