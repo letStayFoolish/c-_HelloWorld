@@ -154,6 +154,121 @@ namespace HelloWorld
             {
                 Console.WriteLine($"Order ID: {order}");
             }
+
+            // Student Grade Challenge
+            int examAssignments = 5;
+            
+            int[] sophiasGrades = new int[] { 90, 86, 87, 98, 100, 94, 90 };
+            int[] andrewGrades = new int[] { 92, 89, 81, 96, 90, 89 };
+            int[] emmaGrades = new int[] { 90, 85, 87, 98, 68, 89, 89, 89 };
+            int[] loganGrades = new int[] { 90, 95, 87, 88, 96, 96 };
+
+            string[] studentNames = new[] { "Sophia", "Andrew", "Emma", "Logan" };
+
+            int[] studentScores = new int[10];
+
+            Console.WriteLine("Student\t\tGrade\n");
+
+            foreach (string name in studentNames)
+            {
+                string currentStudent = name;
+
+                if (currentStudent == "Sophia")
+                {
+                    studentScores = sophiasGrades;
+                }
+                else if (name == "Andrew")
+                {
+                    studentScores = andrewGrades;
+                }
+                else if (name == "Emma")
+                {
+                    studentScores = emmaGrades;
+                }
+                else if (name == "Logan")
+                {
+                    studentScores = loganGrades;
+                }
+
+                int sumAssignmentScores = 0;
+                decimal currentStudentGrade = 0;
+                string currentStudentLetterGrade = "";
+                int gradedAssignments = 0;
+
+                foreach (var score in studentScores)
+                {
+                    gradedAssignments++;
+
+                    if (gradedAssignments <= examAssignments)
+                    {
+                        sumAssignmentScores += score;
+                    }
+                    else
+                    {
+                        sumAssignmentScores += score / 10;
+                    }
+                }
+
+                currentStudentGrade = (decimal)sumAssignmentScores / examAssignments;
+                
+                if (currentStudentGrade  >= 97)
+                {
+                    currentStudentLetterGrade = "A+";
+                }
+                else if (currentStudentGrade >= 93)
+                {
+                    currentStudentLetterGrade = "A";
+                }
+                else if (currentStudentGrade >= 90)
+                {
+                    currentStudentLetterGrade = "A-";
+                }
+                else if (currentStudentGrade >= 87)
+                {
+                    currentStudentLetterGrade = "B+";
+                }
+                else if (currentStudentGrade >= 83)
+                {
+                    currentStudentLetterGrade = "B";
+                }
+                else if (currentStudentGrade >= 80)
+                {
+                    currentStudentLetterGrade = "B-";
+                }
+                else if (currentStudentGrade >= 77)
+                {
+                    currentStudentLetterGrade = "C+";
+                }
+                else if (currentStudentGrade >= 73)
+                {
+                    currentStudentLetterGrade = "C";
+                }
+                else if (currentStudentGrade >= 70)
+                {
+                    currentStudentLetterGrade = "C-";
+                }
+                else if (currentStudentGrade >= 67)
+                {
+                    currentStudentLetterGrade = "D+";
+                }
+                else if (currentStudentGrade >= 63)
+                {
+                    currentStudentLetterGrade = "D";
+                }
+                else if (currentStudentGrade >= 60)
+                {
+                    currentStudentLetterGrade = "D-";
+                }
+                else
+                {
+                    currentStudentLetterGrade = "F";
+                }
+
+                Console.WriteLine($"{currentStudent}\t\t{currentStudentGrade}\t{currentStudentLetterGrade}");
+            }
+
+            Console.WriteLine("Press the Enter key to continue");
+            Console.ReadLine();
         }
     }
 }
