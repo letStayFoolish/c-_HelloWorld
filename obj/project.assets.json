@@ -8,19 +8,19 @@
     "net9.0": []
   },
   "packageFolders": {
-    "/Users/chili/.nuget/packages/": {}
+    "C:\\Users\\nemanja.karaklajic\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/chili/RiderProjects/HelloWorld/HelloWorld.csproj",
+      "projectUniqueName": "C:\\Users\\nemanja.karaklajic\\RiderProjects\\cs_HelloWorld\\HelloWorld.csproj",
       "projectName": "HelloWorld",
-      "projectPath": "/Users/chili/RiderProjects/HelloWorld/HelloWorld.csproj",
-      "packagesPath": "/Users/chili/.nuget/packages/",
-      "outputPath": "/Users/chili/RiderProjects/HelloWorld/obj/",
+      "projectPath": "C:\\Users\\nemanja.karaklajic\\RiderProjects\\cs_HelloWorld\\HelloWorld.csproj",
+      "packagesPath": "C:\\Users\\nemanja.karaklajic\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\nemanja.karaklajic\\RiderProjects\\cs_HelloWorld\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/chili/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\nemanja.karaklajic\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net9.0"
@@ -65,7 +65,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/Users/chili/.dotnet/sdk/9.0.300/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Users\\nemanja.karaklajic\\.dotnet\\sdk\\9.0.300/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

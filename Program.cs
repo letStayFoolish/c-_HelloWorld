@@ -157,17 +157,19 @@ namespace HelloWorld
 
             // Student Grade Challenge
             int examAssignments = 5;
+
+            string[] studentNames = new[] { "Sophia", "Andrew", "Emma", "Logan" };
             
-            int[] sophiasGrades = new int[] { 90, 86, 87, 98, 100, 94, 90 };
+            int[] sophiaGrades = new int[] { 90, 86, 87, 98, 100, 94, 90 };
             int[] andrewGrades = new int[] { 92, 89, 81, 96, 90, 89 };
             int[] emmaGrades = new int[] { 90, 85, 87, 98, 68, 89, 89, 89 };
             int[] loganGrades = new int[] { 90, 95, 87, 88, 96, 96 };
 
-            string[] studentNames = new[] { "Sophia", "Andrew", "Emma", "Logan" };
-
             int[] studentScores = new int[10];
+            string currentStudentLetterGrade = "";
 
-            Console.WriteLine("Student\t\tGrade\n");
+            Console.Clear();
+            Console.WriteLine("Student\t\tExam Score\t\tOverall\tGrade\t\t\tExtra Credit\n");
 
             foreach (string name in studentNames)
             {
@@ -175,7 +177,7 @@ namespace HelloWorld
 
                 if (currentStudent == "Sophia")
                 {
-                    studentScores = sophiasGrades;
+                    studentScores = sophiaGrades;
                 }
                 else if (name == "Andrew")
                 {
@@ -191,8 +193,10 @@ namespace HelloWorld
                 }
 
                 int sumAssignmentScores = 0;
-                decimal currentStudentGrade = 0;
-                string currentStudentLetterGrade = "";
+                int summExamScores = 0;
+                decimal currentStudentExamScore = 0;
+                decimal currentStudentOverallGrade = 0;
+                // int extraCredit
                 int gradedAssignments = 0;
 
                 foreach (var score in studentScores)
@@ -202,6 +206,7 @@ namespace HelloWorld
                     if (gradedAssignments <= examAssignments)
                     {
                         sumAssignmentScores += score;
+                        summExamScores += score;
                     }
                     else
                     {
@@ -209,53 +214,54 @@ namespace HelloWorld
                     }
                 }
 
-                currentStudentGrade = (decimal)sumAssignmentScores / examAssignments;
+                currentStudentOverallGrade = ((decimal)sumAssignmentScores / examAssignments);
+                currentStudentExamScore = (decimal)summExamScores / examAssignments;
                 
-                if (currentStudentGrade  >= 97)
+                if (currentStudentOverallGrade  >= 97)
                 {
                     currentStudentLetterGrade = "A+";
                 }
-                else if (currentStudentGrade >= 93)
+                else if (currentStudentOverallGrade >= 93)
                 {
                     currentStudentLetterGrade = "A";
                 }
-                else if (currentStudentGrade >= 90)
+                else if (currentStudentOverallGrade >= 90)
                 {
                     currentStudentLetterGrade = "A-";
                 }
-                else if (currentStudentGrade >= 87)
+                else if (currentStudentOverallGrade >= 87)
                 {
                     currentStudentLetterGrade = "B+";
                 }
-                else if (currentStudentGrade >= 83)
+                else if (currentStudentOverallGrade >= 83)
                 {
                     currentStudentLetterGrade = "B";
                 }
-                else if (currentStudentGrade >= 80)
+                else if (currentStudentOverallGrade >= 80)
                 {
                     currentStudentLetterGrade = "B-";
                 }
-                else if (currentStudentGrade >= 77)
+                else if (currentStudentOverallGrade >= 77)
                 {
                     currentStudentLetterGrade = "C+";
                 }
-                else if (currentStudentGrade >= 73)
+                else if (currentStudentOverallGrade >= 73)
                 {
                     currentStudentLetterGrade = "C";
                 }
-                else if (currentStudentGrade >= 70)
+                else if (currentStudentOverallGrade >= 70)
                 {
                     currentStudentLetterGrade = "C-";
                 }
-                else if (currentStudentGrade >= 67)
+                else if (currentStudentOverallGrade >= 67)
                 {
                     currentStudentLetterGrade = "D+";
                 }
-                else if (currentStudentGrade >= 63)
+                else if (currentStudentOverallGrade >= 63)
                 {
                     currentStudentLetterGrade = "D";
                 }
-                else if (currentStudentGrade >= 60)
+                else if (currentStudentOverallGrade >= 60)
                 {
                     currentStudentLetterGrade = "D-";
                 }
@@ -264,7 +270,7 @@ namespace HelloWorld
                     currentStudentLetterGrade = "F";
                 }
 
-                Console.WriteLine($"{currentStudent}\t\t{currentStudentGrade}\t{currentStudentLetterGrade}");
+                Console.WriteLine($"{currentStudent}\t\t{currentStudentExamScore}\t\t\t{currentStudentOverallGrade:F2}\t{currentStudentLetterGrade}\t\t\t{(int)currentStudentExamScore} ({currentStudentOverallGrade - currentStudentExamScore} pts)");
             }
 
             Console.WriteLine("Press the Enter key to continue");
